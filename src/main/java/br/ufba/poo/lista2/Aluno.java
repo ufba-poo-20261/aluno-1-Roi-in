@@ -15,8 +15,29 @@ package br.ufba.poo.lista2;
  * número de matrícula e um nome válidos, passados nessa ordem.
  */
 public class Aluno {
+    private String nome;
+    private String matricula;
 
     public Aluno(String matricula, String nome) {
+        this.matricula = matricula;
+        this.nome = nome;
+    }
+
+    public String getMatricula() {
+        return matricula;
+    }
+    public String getNome(){
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        Aluno Aluno2 = (Aluno) obj;
+        return this.matricula.equals(Aluno2.matricula);
     }
 }
 
